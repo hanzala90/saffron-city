@@ -24,7 +24,9 @@ export default function SiteHeader() {
     <header className="site-header">
       <div className="container nav-row">
         <Link className="brand" href="/" aria-label="Saffron City home" onClick={closeMenu}>
-          <Image src="/images/logo.png" alt="Saffron City logo" width={52} height={44} />
+          <span className="brand-logo" aria-hidden="true">
+            <Image src="/images/logo.png" alt="Saffron City logo" width={36} height={36} priority />
+          </span>
           <span>Saffron City</span>
         </Link>
 
@@ -38,7 +40,7 @@ export default function SiteHeader() {
           </ul>
         </nav>
 
-        <Link className="btn btn-nav" href="/contact">Book Consultation</Link>
+        <Link className="btn btn-nav nav-cta" href="/contact">Book Consultation</Link>
 
         <button
           className={`mobile-menu-toggle ${isMenuOpen ? "open" : ""}`}

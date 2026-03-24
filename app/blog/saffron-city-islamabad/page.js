@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
+
+const siteUrl = "https://saffroncity.pk";
 
 export const metadata = {
   title: "Saffron City Islamabad Guide",
@@ -13,6 +16,34 @@ export const metadata = {
   ],
   alternates: {
     canonical: "/blog/saffron-city-islamabad"
+  },
+  openGraph: {
+    title: "Saffron City Islamabad: Location, Payment Plan, and Investment Outlook",
+    description:
+      "A practical breakdown of Saffron City covering connectivity, planned amenities, Sector A payment structure, and who can benefit from this project.",
+    url: `${siteUrl}/blog/saffron-city-islamabad`,
+    type: "article",
+    images: [
+      {
+        url: `${siteUrl}/images/master-plan.jpg`,
+        width: 1200,
+        height: 700,
+        alt: "Saffron City master plan"
+      },
+      {
+        url: `${siteUrl}/images/logo.png`,
+        width: 200,
+        height: 200,
+        alt: "Saffron City Logo"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Saffron City Islamabad: Location, Payment Plan, and Investment Outlook",
+    description:
+      "A practical breakdown of Saffron City covering connectivity, planned amenities, and payment structure.",
+    image: `${siteUrl}/images/master-plan.jpg`
   }
 };
 
@@ -79,6 +110,40 @@ export default function SaffronCityIslamabadBlogPage() {
             brings together the current project information in one place. It is useful
             for both end-users and investors who want a quick, factual overview.
           </p>
+        </div>
+      </section>
+
+      <section className="section section-surface blog-visuals-section">
+        <div className="container reveal">
+          <div className="blog-gallery">
+            <figure className="blog-image-card">
+              <Image
+                src="/images/master-plan.jpg"
+                alt="Saffron City master plan"
+                width={1200}
+                height={700}
+              />
+              <figcaption>Master plan overview of Saffron City Islamabad.</figcaption>
+            </figure>
+            <figure className="blog-image-card">
+              <Image
+                src="/images/noc.jpg"
+                alt="Saffron City NOC approved by RDA"
+                width={1200}
+                height={1200}
+              />
+              <figcaption>Project NOC approved by RDA.</figcaption>
+            </figure>
+            <figure className="blog-image-card">
+              <Image
+                src="/images/payment-plan-sector-a.jpeg"
+                alt="Saffron City Sector A payment plan"
+                width={900}
+                height={1200}
+              />
+              <figcaption>Sector A payment plan snapshot.</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
