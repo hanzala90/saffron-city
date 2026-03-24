@@ -26,6 +26,15 @@ export const metadata = {
     template: "%s | Saffron City"
   },
   description,
+  icons: {
+    icon: [
+      { url: "/images/logo.png", type: "image/png" }
+    ],
+    shortcut: ["/images/logo.png"],
+    apple: [
+      { url: "/images/logo.png", type: "image/png" }
+    ]
+  },
   applicationName: "Saffron City",
   keywords: [
     "Saffron City",
