@@ -16,7 +16,7 @@ const bodyFont = Plus_Jakarta_Sans({
   display: "swap"
 });
 
-const siteUrl = "https://saffroncity.pk";
+const siteUrl = "https://www.safroncity.com";
 const title = "Saffron City Islamabad | Premium Real Estate & Housing Society";
 const description =
   "Invest in Saffron City Islamabad, the top premium housing society offering modern infrastructure, prime location, and flexible payment plans. Book your Saffron City plot today.";

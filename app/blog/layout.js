@@ -1,8 +1,8 @@
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
-const siteUrl = "https://saffroncity.pk";
-const logoUrl = "https://saffroncity.pk/images/logo.png";
+const siteUrl = "https://www.safroncity.com";
+const logoUrl = "https://www.safroncity.com/images/logo.png";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),

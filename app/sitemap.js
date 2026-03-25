@@ -1,43 +1,43 @@
 export default function sitemap() {
   return [
     {
-      url: "https://saffroncity.pk",
+      url: "https://www.safroncity.com",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1
     },
     {
-      url: "https://saffroncity.pk/location",
+      url: "https://www.safroncity.com/location",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9
     },
     {
-      url: "https://saffroncity.pk/investment",
+      url: "https://www.safroncity.com/investment",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9
     },
     {
-      url: "https://saffroncity.pk/payment-plan",
+      url: "https://www.safroncity.com/payment-plan",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.95
     },
     {
-      url: "https://saffroncity.pk/contact",
+      url: "https://www.safroncity.com/contact",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9
     },
     {
-      url: "https://saffroncity.pk/blog",
+      url: "https://www.safroncity.com/blog",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.85
     },
     {
-      url: "https://saffroncity.pk/blog/saffron-city-islamabad",
+      url: "https://www.safroncity.com/blog/saffron-city-islamabad",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.88

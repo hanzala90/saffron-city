@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const siteUrl = "https://saffroncity.pk";
+const siteUrl = "https://www.safroncity.com";
 
 export const metadata = {
   title: "Saffron City Location Guide",

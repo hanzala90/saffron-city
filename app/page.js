@@ -34,9 +34,9 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   name: "Saffron City",
-  url: "https://saffroncity.pk",
-  logo: "https://saffroncity.pk/images/logo.png",
-  image: "https://saffroncity.pk/images/master-plan.jpg",
+  url: "https://www.safroncity.com",
+  logo: "https://www.safroncity.com/images/logo.png",
+  image: "https://www.safroncity.com/images/master-plan.jpg",
   areaServed: "Islamabad-Rawalpindi",
   description:
     "Saffron City is a premium planned real estate project near Islamabad offering modern infrastructure, strategic connectivity, and investment opportunities.",

@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/"
     },
-    sitemap: "https://saffroncity.pk/sitemap.xml"
+    sitemap: "https://www.safroncity.com/sitemap.xml"
   };
 }

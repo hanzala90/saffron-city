@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const siteUrl = "https://saffroncity.pk";
+const siteUrl = "https://www.safroncity.com";
 
 export const metadata = {
   title: "Is Saffron City NOC Approved by RDA",
@@ -60,7 +60,7 @@ export default function SaffronCityNocApprovalPage() {
             headline: "Is Saffron City NOC Approved by RDA",
             description:
               "Verify Saffron City NOC approval status and understand the importance of project regulatory clearance.",
-            mainEntityOfPage: "https://saffroncity.pk/blog/saffron-city-noc-approval",
+            mainEntityOfPage: "https://www.safroncity.com/blog/saffron-city-noc-approval",
             author: {
               "@type": "Organization",
               name: "Saffron City"
@@ -70,7 +70,7 @@ export default function SaffronCityNocApprovalPage() {
               name: "Saffron City",
               logo: {
                 "@type": "ImageObject",
-                url: "https://saffroncity.pk/images/logo.png"
+                url: "https://www.safroncity.com/images/logo.png"
               }
             }
           })

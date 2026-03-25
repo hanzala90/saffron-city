@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const siteUrl = "https://saffroncity.pk";
+const siteUrl = "https://www.safroncity.com";
 
 export const metadata = {
   title: "Saffron City Islamabad Guide",
@@ -77,7 +77,7 @@ const jsonLd = {
   headline: "Saffron City Islamabad: Location, Payment Plan, and Investment Outlook",
   description:
     "A factual Saffron City Islamabad guide based on current website information, including location, amenities, and payment plan details.",
-  mainEntityOfPage: "https://saffroncity.pk/blog/saffron-city-islamabad",
+  mainEntityOfPage: "https://www.safroncity.com/blog/saffron-city-islamabad",
   author: {
     "@type": "Organization",
     name: "Saffron City"
@@ -87,7 +87,7 @@ const jsonLd = {
     name: "Saffron City",
     logo: {
       "@type": "ImageObject",
-      url: "https://saffroncity.pk/images/logo.png"
+      url: "https://www.safroncity.com/images/logo.png"
     }
   },
   about: ["Saffron City", "Islamabad real estate", "payment plan", "property investment"]
