@@ -1,6 +1,8 @@
 import { Cinzel, Plus_Jakarta_Sans } from "next/font/google";
 import MobileLeadPopup from "@/components/MobileLeadPopup";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
+
 
 const headingFont = Cinzel({
   subsets: ["latin"],
@@ -15,9 +17,9 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 const siteUrl = "https://saffroncity.pk";
-const title = "Saffron City | Premium Living Near Islamabad";
+const title = "Saffron City Islamabad | Premium Real Estate & Housing Society";
 const description =
-  "Discover Saffron City, a premium planned community near Islamabad with strategic location, modern infrastructure, and investment-ready opportunities.";
+  "Invest in Saffron City Islamabad, the top premium housing society offering modern infrastructure, prime location, and flexible payment plans. Book your Saffron City plot today.";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -79,6 +81,7 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <MobileLeadPopup />
+        <WhatsAppButton />
       </body>
     </html>
   );

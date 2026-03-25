@@ -63,7 +63,7 @@ export default function Home() {
           <div className="container hero-grid">
             <div className="hero-copy reveal">
               <p className="kicker">Premium Real Estate Destination</p>
-              <h1>Own a Signature Address in Islamabad&apos;s Emerging Urban Belt</h1>
+              <h1>Saffron City Islamabad: Your Signature Address in the Emerging Urban Belt</h1>
               <p>
                 Saffron City is crafted for families and investors who value location,
                 planning, and long-term upside. Every zone is built to support a
@@ -96,7 +96,7 @@ export default function Home() {
           <div className="container two-col">
             <div className="reveal">
               <p className="kicker">Project Overview</p>
-              <h2>Designed as a Complete, Future-Ready Community</h2>
+              <h2>Saffron City is Designed as a Complete, Future-Ready Community</h2>
               <p>
                 Saffron City combines premium everyday convenience with a structured
                 urban vision. From green spaces and commercial activity to modern road
