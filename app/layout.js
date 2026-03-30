@@ -1,4 +1,5 @@
 import { Cinzel, Plus_Jakarta_Sans } from "next/font/google";
+import Script from "next/script";
 import MobileLeadPopup from "@/components/MobileLeadPopup";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
@@ -79,6 +80,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`}>
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18051387680"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18051387680');
+          `}
+        </Script>
         {children}
         <MobileLeadPopup />
         <WhatsAppButton />
