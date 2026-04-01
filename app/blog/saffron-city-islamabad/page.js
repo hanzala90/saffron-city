@@ -122,6 +122,8 @@ export default function SaffronCityIslamabadBlogPage() {
                 alt="Saffron City master plan"
                 width={1200}
                 height={700}
+                sizes="(max-width: 768px) 100vw, 70vw"
+                quality={88}
               />
               <figcaption>Master plan overview of Saffron City Islamabad.</figcaption>
             </figure>
@@ -131,6 +133,8 @@ export default function SaffronCityIslamabadBlogPage() {
                 alt="Saffron City NOC approved by RDA"
                 width={1200}
                 height={1200}
+                sizes="(max-width: 768px) 100vw, 70vw"
+                quality={88}
               />
               <figcaption>Project NOC approved by RDA.</figcaption>
             </figure>
@@ -140,6 +144,8 @@ export default function SaffronCityIslamabadBlogPage() {
                 alt="Saffron City Sector A payment plan"
                 width={900}
                 height={1200}
+                sizes="(max-width: 768px) 100vw, 70vw"
+                quality={88}
               />
               <figcaption>Sector A payment plan snapshot.</figcaption>
             </figure>

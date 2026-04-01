@@ -31,6 +31,12 @@ export default function sitemap() {
       priority: 0.9
     },
     {
+      url: "https://www.safroncity.com/saffron-city-islamabad",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.98
+    },
+    {
       url: "https://www.safroncity.com/blog",
       lastModified: new Date(),
       changeFrequency: "weekly",
@@ -41,6 +47,42 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.88
+    },
+    {
+      url: "https://www.safroncity.com/blog/saffron-city-islamabad-5-marla-price",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.83
+    },
+    {
+      url: "https://www.safroncity.com/blog/saffron-city-islamabad-vs-bahria-town",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.83
+    },
+    {
+      url: "https://www.safroncity.com/blog/saffron-city-islamabad-overseas-guide",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.83
+    },
+    {
+      url: "https://www.safroncity.com/blog/saffron-city-location-guide",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.84
+    },
+    {
+      url: "https://www.safroncity.com/blog/saffron-city-noc-approval",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.84
+    },
+    {
+      url: "https://www.safroncity.com/blog/saffron-city-payment-plan-guide",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.84
     }
   ];
 }

@@ -1,5 +1,6 @@
 import { Cinzel, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
+import { OrganizationJsonLd } from "next-seo";
 import MobileLeadPopup from "@/components/MobileLeadPopup";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
@@ -49,6 +50,17 @@ export const metadata = {
   alternates: {
     canonical: "/"
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1
+    }
+  },
   openGraph: {
     title,
     description,
@@ -80,6 +92,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`}>
       <body>
+        <OrganizationJsonLd
+          type="RealEstateAgent"
+          id={`${siteUrl}/#organization`}
+          name="Saffron City Islamabad"
+          legalName="Saffron City"
+          url={siteUrl}
+          logo={`${siteUrl}/images/logo.png`}
+          image={`${siteUrl}/images/master-plan.jpg`}
+          description={description}
+          areaServed="Islamabad-Rawalpindi"
+          sameAs={["https://www.facebook.com/SaffronCityGTroad"]}
+        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-18051387680"
           strategy="afterInteractive"

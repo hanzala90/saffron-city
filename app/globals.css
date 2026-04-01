@@ -774,7 +774,7 @@ p {
 .pricing-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 620px;
+  min-width: 0;
 }
 
 .pricing-table th,
@@ -783,6 +783,67 @@ p {
   padding: 0.9rem 1rem;
   text-align: left;
   white-space: nowrap;
+}
+
+.payment-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
+  gap: 1.2rem;
+  align-items: start;
+  margin-top: 1.1rem;
+}
+
+.payment-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.payment-meta-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.payment-meta-card .kicker {
+  margin-bottom: 0.45rem;
+}
+
+.payment-meta-card h3 {
+  margin-bottom: 0.55rem;
+  font-size: 1.2rem;
+}
+
+.payment-meta-card p:last-child {
+  margin-bottom: 0;
+}
+
+.payment-table th,
+.payment-table td {
+  font-size: 0.95rem;
+}
+
+.payment-image-wrap {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 0.8rem;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.payment-image-wrap img {
+  border-radius: 16px;
+}
+
+.payment-image-caption {
+  padding: 0.9rem 0.3rem 0.1rem;
+}
+
+.payment-image-caption p {
+  margin-bottom: 0.2rem;
 }
 
 .pricing-table thead th {
@@ -865,6 +926,14 @@ p {
   .metrics {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .payment-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-meta-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 900px) {
@@ -894,6 +963,16 @@ p {
 
   .metrics {
     grid-template-columns: 1fr;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    white-space: normal;
+    padding: 0.8rem 0.7rem;
+  }
+
+  .payment-table {
+    font-size: 0.85rem;
   }
 
   .mobile-lead-fab {

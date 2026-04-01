@@ -7,6 +7,7 @@ import Link from "next/link";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/blog", label: "Blog" },
+  { href: "/saffron-city-islamabad", label: "Saffron City Islamabad" },
   { href: "/location", label: "Location" },
   { href: "/investment", label: "Investment" },
   { href: "/payment-plan", label: "Payment Plan" },
@@ -25,7 +26,15 @@ export default function SiteHeader() {
       <div className="container nav-row">
         <Link className="brand" href="/" aria-label="Saffron City home" onClick={closeMenu}>
           <span className="brand-logo" aria-hidden="true">
-            <Image src="/images/logo.png" alt="Saffron City logo" width={36} height={36} priority />
+            <Image
+              src="/images/logo.png"
+              alt="Saffron City logo"
+              width={36}
+              height={36}
+              priority
+              sizes="36px"
+              quality={90}
+            />
           </span>
           <span>Saffron City</span>
         </Link>

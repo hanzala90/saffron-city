@@ -23,7 +23,14 @@ export default function BlogHeader() {
     <header className="site-header blog-header">
       <div className="container nav-row">
         <Link className="brand" href="/blog" aria-label="Saffron City blog home" onClick={closeMenu}>
-          <Image src="/images/logo.png" alt="Saffron City logo" width={52} height={44} />
+          <Image
+            src="/images/logo.png"
+            alt="Saffron City logo"
+            width={52}
+            height={44}
+            sizes="52px"
+            quality={90}
+          />
           <span>Saffron City Blog</span>
         </Link>
 

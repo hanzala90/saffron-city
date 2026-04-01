@@ -1,20 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ArticleJsonLd, BreadcrumbJsonLd } from "next-seo";
 
 const siteUrl = "https://www.safroncity.com";
+const pageUrl = `${siteUrl}/blog/saffron-city-noc-approval`;
+const pageTitle = "Is Saffron City NOC Approved by RDA?";
+const pageDescription =
+  "Verify Saffron City NOC approval status from RDA and understand what NOC approval means for your investment and property security.";
 
 export const metadata = {
   title: "Is Saffron City NOC Approved by RDA",
-  description:
-    "Verify Saffron City NOC approval status from RDA and understand what NOC approval means for your investment and property security.",
+  description: pageDescription,
   alternates: {
     canonical: "/blog/saffron-city-noc-approval"
   },
   openGraph: {
-    title: "Is Saffron City NOC Approved by RDA?",
-    description:
-      "Verify Saffron City NOC approval status from RDA and understand what regulatory approval means for your investment security.",
-    url: `${siteUrl}/blog/saffron-city-noc-approval`,
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
     type: "article",
     images: [
       {
@@ -51,30 +54,22 @@ const nocPoints = [
 export default function SaffronCityNocApprovalPage() {
   return (
     <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline: "Is Saffron City NOC Approved by RDA",
-            description:
-              "Verify Saffron City NOC approval status and understand the importance of project regulatory clearance.",
-            mainEntityOfPage: "https://www.safroncity.com/blog/saffron-city-noc-approval",
-            author: {
-              "@type": "Organization",
-              name: "Saffron City"
-            },
-            publisher: {
-              "@type": "Organization",
-              name: "Saffron City",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://www.safroncity.com/images/logo.png"
-              }
-            }
-          })
-        }}
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: siteUrl },
+          { name: "Blog", item: `${siteUrl}/blog` },
+          { name: "Saffron City NOC Approval", item: pageUrl }
+        ]}
+      />
+      <ArticleJsonLd
+        type="BlogPosting"
+        url={pageUrl}
+        headline={pageTitle}
+        image={`${siteUrl}/images/noc.jpg`}
+        datePublished="2026-03-20T00:00:00.000Z"
+        dateModified={new Date().toISOString()}
+        author="Saffron City"
+        description={pageDescription}
       />
 
       <section className="section page-hero blog-hero">
@@ -97,6 +92,8 @@ export default function SaffronCityNocApprovalPage() {
               alt="Saffron City NOC approval document from RDA"
               width={1200}
               height={700}
+              sizes="(max-width: 900px) 100vw, 70vw"
+              quality={88}
             />
             <figcaption>RDA NOC approval for Saffron City project.</figcaption>
           </figure>

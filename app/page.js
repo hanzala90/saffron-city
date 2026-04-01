@@ -6,10 +6,16 @@ import SiteFooter from "@/components/SiteFooter";
 const highlights = [
   "Prime location near Islamabad growth corridor",
   "Modern planning with lifestyle-ready zones",
-  "Flexible payment structure for multiple buyer profiles"
+  "Clear project information for buyers and investors"
 ];
 
 const mainInfo = [
+  {
+    title: "Saffron City Islamabad Guide",
+    text: "Read our complete Saffron City Islamabad page with NOC, location, and investment details.",
+    href: "/saffron-city-islamabad",
+    cta: "Open Full Guide"
+  },
   {
     title: "Location",
     text: "Minutes away from DHA, Bahria Town, and Islamabad Expressway.",
@@ -17,16 +23,39 @@ const mainInfo = [
     cta: "View Connectivity"
   },
   {
-    title: "Payment Plan",
-    text: "Sector A structure includes booking, installments, and possession slabs.",
-    href: "/payment-plan",
-    cta: "See Pricing"
+    title: "Project Overview",
+    text: "Understand the Saffron City Islamabad story, from planning to long-term buyer fit.",
+    href: "/blog/saffron-city-islamabad",
+    cta: "Read Overview"
   },
   {
     title: "Investment",
     text: "Positioned for long-term value in a developing urban corridor.",
     href: "/investment",
     cta: "Read Insights"
+  }
+];
+
+const guideLinks = [
+  {
+    title: "Saffron City Islamabad Main Guide",
+    href: "/saffron-city-islamabad",
+    text: "Read the complete overview of Saffron City Islamabad, including NOC, location, and investment fit."
+  },
+  {
+    title: "Saffron City Islamabad Project Overview",
+    href: "/blog/saffron-city-islamabad",
+    text: "Open the long-form guide built around the Saffron City Islamabad keyword."
+  },
+  {
+    title: "Saffron City Islamabad Location",
+    href: "/location",
+    text: "Review access routes, nearby landmarks, and why the location matters for buyers."
+  },
+  {
+    title: "Saffron City Islamabad Blog",
+    href: "/blog/saffron-city-islamabad",
+    text: "Open the long-form article built around the Saffron City Islamabad keyword."
   }
 ];
 
@@ -69,8 +98,13 @@ export default function Home() {
                 planning, and long-term upside. Every zone is built to support a
                 premium, secure, and future-focused lifestyle.
               </p>
+              <ul className="check-list hero-points">
+                <li>Saffron City Islamabad location near key growth corridors</li>
+                <li>Saffron City Islamabad project overview for buyers and investors</li>
+                <li>Dedicated pages for location, investment, and project details</li>
+              </ul>
               <div className="hero-cta">
-                <Link className="btn btn-primary" href="/payment-plan">View Payment Plan</Link>
+                <Link className="btn btn-primary" href="/saffron-city-islamabad">Read Main Guide</Link>
                 <Link className="btn btn-ghost" href="/location">Explore Location</Link>
               </div>
               <ul className="metrics" aria-label="Project highlights">
@@ -86,7 +120,8 @@ export default function Home() {
                 width={1000}
                 height={700}
                 priority
-                sizes="(max-width: 900px) 100vw, 50vw"
+                sizes="(max-width: 900px) 100vw, 52vw"
+                quality={90}
               />
             </div>
           </div>
@@ -96,7 +131,7 @@ export default function Home() {
           <div className="container two-col">
             <div className="reveal">
               <p className="kicker">Project Overview</p>
-              <h2>Saffron City is Designed as a Complete, Future-Ready Community</h2>
+              <h2>Saffron City Islamabad is Designed as a Complete, Future-Ready Community</h2>
               <p>
                 Saffron City combines premium everyday convenience with a structured
                 urban vision. From green spaces and commercial activity to modern road
@@ -116,6 +151,24 @@ export default function Home() {
                 ))}
               </ul>
             </aside>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="container">
+            <div className="section-head reveal">
+              <p className="kicker">Internal Links</p>
+              <h2>Saffron City Islamabad Pages You Should Read Next</h2>
+            </div>
+            <div className="card-grid">
+              {guideLinks.map((item) => (
+                <article key={item.href} className="feature-card reveal">
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                  <Link className="btn btn-ghost" href={item.href}>Open Page</Link>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 

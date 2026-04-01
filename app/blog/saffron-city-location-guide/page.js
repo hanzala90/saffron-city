@@ -1,20 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ArticleJsonLd, BreadcrumbJsonLd } from "next-seo";
 
 const siteUrl = "https://www.safroncity.com";
+const pageUrl = `${siteUrl}/blog/saffron-city-location-guide`;
+const pageTitle = "Saffron City Location Guide: Connectivity and Nearby Landmarks";
+const pageDescription =
+  "A practical Saffron City location guide covering connectivity, nearby destinations, and why access matters for buyers and investors.";
 
 export const metadata = {
   title: "Saffron City Location Guide",
-  description:
-    "A practical Saffron City location guide covering connectivity, nearby destinations, and why access matters for buyers and investors.",
+  description: pageDescription,
   alternates: {
     canonical: "/blog/saffron-city-location-guide"
   },
   openGraph: {
-    title: "Saffron City Location Guide: Connectivity and Nearby Landmarks",
-    description:
-      "A quick guide to Saffron City location advantages, travel convenience, and why connectivity plays a key role for residents and investors.",
-    url: `${siteUrl}/blog/saffron-city-location-guide`,
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
     type: "article",
     images: [
       {
@@ -51,6 +54,23 @@ const keyPoints = [
 export default function SaffronCityLocationGuidePage() {
   return (
     <main>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: siteUrl },
+          { name: "Blog", item: `${siteUrl}/blog` },
+          { name: "Saffron City Location Guide", item: pageUrl }
+        ]}
+      />
+      <ArticleJsonLd
+        type="BlogPosting"
+        url={pageUrl}
+        headline={pageTitle}
+        image={`${siteUrl}/images/master-plan.jpg`}
+        datePublished="2026-03-20T00:00:00.000Z"
+        dateModified={new Date().toISOString()}
+        author="Saffron City"
+        description={pageDescription}
+      />
       <section className="section page-hero blog-hero">
         <div className="container reveal">
           <p className="kicker">Location Blog</p>
@@ -71,6 +91,8 @@ export default function SaffronCityLocationGuidePage() {
               alt="Master plan and surrounding connectivity"
               width={1200}
               height={700}
+              sizes="(max-width: 900px) 100vw, 70vw"
+              quality={88}
             />
             <figcaption>Connectivity-focused view of Saffron City.</figcaption>
           </figure>

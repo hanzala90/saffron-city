@@ -1,20 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ArticleJsonLd, BreadcrumbJsonLd } from "next-seo";
 
 const siteUrl = "https://www.safroncity.com";
+const pageUrl = `${siteUrl}/blog/saffron-city-payment-plan-guide`;
+const pageTitle = "Saffron City Payment Plan Explained for New Buyers";
+const pageDescription =
+  "A simple guide to Saffron City payment plan structure including booking, installments, and possession charges.";
 
 export const metadata = {
   title: "Saffron City Payment Plan Guide",
-  description:
-    "A simple guide to Saffron City payment plan structure including booking, installments, and possession charges.",
+  description: pageDescription,
   alternates: {
     canonical: "/blog/saffron-city-payment-plan-guide"
   },
   openGraph: {
-    title: "Saffron City Payment Plan Explained for New Buyers",
-    description:
-      "Understand booking, installments, and possession charges in a simple format so you can plan your budget with confidence.",
-    url: `${siteUrl}/blog/saffron-city-payment-plan-guide`,
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
     type: "article",
     images: [
       {
@@ -51,6 +54,23 @@ const planPoints = [
 export default function SaffronCityPaymentPlanGuidePage() {
   return (
     <main>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: siteUrl },
+          { name: "Blog", item: `${siteUrl}/blog` },
+          { name: "Saffron City Payment Plan Guide", item: pageUrl }
+        ]}
+      />
+      <ArticleJsonLd
+        type="BlogPosting"
+        url={pageUrl}
+        headline={pageTitle}
+        image={`${siteUrl}/images/payment-plan-sector-a.jpeg`}
+        datePublished="2026-03-20T00:00:00.000Z"
+        dateModified={new Date().toISOString()}
+        author="Saffron City"
+        description={pageDescription}
+      />
       <section className="section page-hero blog-hero">
         <div className="container reveal">
           <p className="kicker">Payment Blog</p>
@@ -70,6 +90,8 @@ export default function SaffronCityPaymentPlanGuidePage() {
               alt="Saffron City Sector A payment plan"
               width={900}
               height={1200}
+              sizes="(max-width: 900px) 100vw, 70vw"
+              quality={88}
             />
             <figcaption>Payment plan snapshot for Sector A.</figcaption>
           </figure>

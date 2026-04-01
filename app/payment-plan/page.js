@@ -4,7 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
 export const metadata = {
-  title: "Sector A Payment Plan",
+  title: "Saffron City Islamabad Payment Plan",
   description:
     "Review Saffron City Sector A pre-launch payment plan with booking amount, monthly installments, and possession charges."
 };
@@ -36,6 +36,30 @@ const totals = {
   oneKanal: 8400000
 };
 
+const paymentCards = [
+  {
+    title: "Booking",
+    value: "10% upfront",
+    note: "Secures your selected plot category."
+  },
+  {
+    title: "Installments",
+    value: "30 monthly parts",
+    note: "Spread the cost over a manageable schedule."
+  },
+  {
+    title: "Possession",
+    value: "Final stage payment",
+    note: "Completes the payment cycle at possession."
+  }
+];
+
+const planSizes = [
+  { label: "5 Marla", booking: 400000, monthly: 40000, possession: 500000, total: 2100000 },
+  { label: "10 Marla", booking: 750000, monthly: 75000, possession: 1500000, total: 4500000 },
+  { label: "1 Kanal", booking: 1400000, monthly: 140000, possession: 2800000, total: 8400000 }
+];
+
 const terms = [
   "Development charges are included.",
   "Form processing fee is Rs 5,000 (non-refundable).",
@@ -60,57 +84,77 @@ export default function PaymentPlanPage() {
       <main>
         <section className="section page-hero">
           <div className="container reveal">
-            <p className="kicker">Sector A Pricing</p>
-            <h1>Saffron City Payment Plan</h1>
+            <p className="kicker">Saffron City Islamabad Payment Plan</p>
+            <h1>Saffron City Islamabad Payment Plan</h1>
             <p>
-              Payment details below are structured from your provided Sector A plan image.
-              For the latest availability and inventory status, contact the sales team.
+              A clear pricing overview for buyers looking at Saffron City Islamabad. The plan below
+              breaks the Sector A structure into booking, monthly installments, and possession stages.
             </p>
+            <div className="hero-cta">
+              <Link className="btn btn-primary" href="/saffron-city-islamabad">Read Main Guide</Link>
+              <Link className="btn btn-ghost" href="/contact">Request Callback</Link>
+            </div>
           </div>
         </section>
 
         <section className="section section-surface">
-          <div className="container two-col">
-            <div className="reveal">
-              <h2>Plan Snapshot</h2>
-              <div className="table-wrap">
-                <table className="pricing-table">
+          <div className="container">
+            <div className="section-head reveal">
+              <p className="kicker">Plan Overview</p>
+              <h2>Saffron City Islamabad Payment Plan Snapshot</h2>
+            </div>
+
+            <div className="payment-meta-grid">
+              {paymentCards.map((item) => (
+                <article key={item.title} className="payment-meta-card reveal">
+                  <p className="kicker">{item.title}</p>
+                  <h3>{item.value}</h3>
+                  <p>{item.note}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="payment-layout">
+              <div className="table-wrap reveal">
+                <table className="pricing-table payment-table">
                   <thead>
                     <tr>
-                      <th>Mode of Payment</th>
-                      <th>5 Marla</th>
-                      <th>10 Marla</th>
-                      <th>1 Kanal</th>
+                      <th>Plot Size</th>
+                      <th>Booking</th>
+                      <th>Installments</th>
+                      <th>Possession</th>
+                      <th>Total</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {planRows.map((row) => (
+                    {planSizes.map((row) => (
                       <tr key={row.label}>
-                        <td>{row.label}</td>
-                        <td>Rs {formatCurrency(row.fiveMarla)}</td>
-                        <td>Rs {formatCurrency(row.tenMarla)}</td>
-                        <td>Rs {formatCurrency(row.oneKanal)}</td>
+                        <td><strong>{row.label}</strong></td>
+                        <td>Rs {formatCurrency(row.booking)}</td>
+                        <td>Rs {formatCurrency(row.monthly)}</td>
+                        <td>Rs {formatCurrency(row.possession)}</td>
+                        <td>Rs {formatCurrency(row.total)}</td>
                       </tr>
                     ))}
-                    <tr className="table-total">
-                      <td>Total Plan Value</td>
-                      <td>Rs {formatCurrency(totals.fiveMarla)}</td>
-                      <td>Rs {formatCurrency(totals.tenMarla)}</td>
-                      <td>Rs {formatCurrency(totals.oneKanal)}</td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
-            </div>
 
-            <div className="image-wrap reveal delay-1">
+              <div className="image-wrap reveal delay-1 payment-image-wrap">
               <Image
                 src="/images/payment-plan-sector-a.jpeg"
                 alt="Saffron City Sector A payment plan reference"
                 width={900}
                 height={600}
-                sizes="(max-width: 900px) 100vw, 50vw"
+                sizes="(max-width: 900px) 100vw, 42vw"
+                quality={90}
+                priority
               />
+                <div className="payment-image-caption">
+                  <p className="kicker">Sector A Reference</p>
+                  <p>Pre-launch plan published for Saffron City Islamabad buyers.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -119,7 +163,7 @@ export default function PaymentPlanPage() {
           <div className="container two-col">
             <div className="reveal">
               <p className="kicker">Terms and Conditions</p>
-              <h2>Important Notes for Buyers</h2>
+              <h2>Important Notes for Saffron City Islamabad Buyers</h2>
               <ul className="check-list">
                 {terms.map((term) => (
                   <li key={term}>{term}</li>
@@ -137,6 +181,32 @@ export default function PaymentPlanPage() {
                 <Link className="btn btn-ghost" href="/investment">View Investment Insights</Link>
               </div>
             </aside>
+          </div>
+        </section>
+
+        <section className="section section-surface">
+          <div className="container">
+            <div className="section-head reveal">
+              <p className="kicker">Related Reading</p>
+              <h2>Helpful Pages for Saffron City Islamabad Buyers</h2>
+            </div>
+            <div className="card-grid">
+              <article className="feature-card reveal">
+                <h3>Saffron City Islamabad Main Guide</h3>
+                <p>Understand the broader project context including NOC, location, and investment outlook.</p>
+                <Link className="btn btn-ghost" href="/saffron-city-islamabad">Open Main Guide</Link>
+              </article>
+              <article className="feature-card reveal">
+                <h3>Sector A 5 Marla Price Guide</h3>
+                <p>Review the focused 5 Marla booking, installment, and total price details.</p>
+                <Link className="btn btn-ghost" href="/blog/saffron-city-islamabad-5-marla-price">Read 5 Marla Guide</Link>
+              </article>
+              <article className="feature-card reveal">
+                <h3>Payment Plan Explanation</h3>
+                <p>See a plain-language breakdown for first-time buyers researching the plan.</p>
+                <Link className="btn btn-ghost" href="/blog/saffron-city-payment-plan-guide">Read Payment Guide</Link>
+              </article>
+            </div>
           </div>
         </section>
       </main>
