@@ -83,6 +83,30 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.84
+    },
+    {
+      url: "https://www.safroncity.com/saffron-city-islamabad-booking",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.95
+    },
+    {
+      url: "https://www.safroncity.com/saffron-city-islamabad-reviews",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.90
+    },
+    {
+      url: "https://www.safroncity.com/saffron-city-islamabad-contact-number",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.90
+    },
+    {
+      url: "https://www.safroncity.com/saffron-city-islamabad-development-updates",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.90
     }
   ];
 }

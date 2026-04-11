@@ -71,24 +71,24 @@ const faqs = [
 
 const relatedPages = [
   {
-    title: "Saffron City Islamabad Payment Plan",
-    href: "/payment-plan",
-    text: "Review booking amounts, installments, and possession charges in one place."
+    title: "Saffron City Booking Guide",
+    href: "/saffron-city-islamabad-booking",
+    text: "Details regarding down payments, documentation and booking your residential or commercial plots."
   },
   {
-    title: "Saffron City Islamabad Location",
-    href: "/location",
-    text: "Check access routes and nearby landmarks for daily convenience."
+    title: "Development Updates",
+    href: "/saffron-city-islamabad-development-updates",
+    text: "Watch the latest ground development and track the timelines for property possession."
   },
   {
-    title: "Saffron City Islamabad 5 Marla Price Guide",
-    href: "/blog/saffron-city-islamabad-5-marla-price",
-    text: "See the focused 5 Marla price snapshot for Saffron City Islamabad buyers."
+    title: "Saffron City Reviews",
+    href: "/saffron-city-islamabad-reviews",
+    text: "Explore what top real estate investors and early buyers are saying about the project."
   },
   {
-    title: "Saffron City Islamabad vs Bahria Town",
-    href: "/blog/saffron-city-islamabad-vs-bahria-town",
-    text: "Compare Saffron City Islamabad against a known market name for better context."
+    title: "Official Contact Number",
+    href: "/saffron-city-islamabad-contact-number",
+    text: "Get the official Saffron City Islamabad contact number for safe investments."
   }
 ];
 
