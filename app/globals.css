@@ -768,7 +768,7 @@ p {
   border-radius: 16px;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
-  background: #fff;
+  background: var(--card);
 }
 
 .pricing-table {
@@ -779,7 +779,7 @@ p {
 
 .pricing-table th,
 .pricing-table td {
-  border-bottom: 1px solid #eadcc9;
+  border-bottom: 1px solid var(--line);
   padding: 0.9rem 1rem;
   text-align: left;
   white-space: nowrap;
