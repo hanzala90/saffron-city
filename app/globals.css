@@ -864,30 +864,328 @@ p {
 }
 
 
-/* ── Map Viewer ──────────────────────────────────────────── */
-.map-viewer-wrap {
-  margin-top: 1rem;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+/* ── Master Plan Section & Interactive Viewer ───────────── */
+.master-plan-section {
+  position: relative;
+}
+
+.master-plan-card {
   background: var(--card);
-}
-
-.map-iframe {
-  width: 100%;
-  height: 620px;
-  border: none;
-  display: block;
-}
-
-.map-actions {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: clamp(1rem, 2.5vw, 1.8rem);
+  box-shadow: var(--shadow);
   display: flex;
-  gap: 0.8rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.master-plan-preview-wrapper {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(171, 93, 34, 0.28);
+  background: #14110e;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 240ms ease, box-shadow 240ms ease;
+}
+
+.master-plan-preview-wrapper:hover {
+  border-color: rgba(217, 125, 54, 0.55);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+.master-plan-preview-img {
+  width: 100%;
+  height: auto;
+  max-height: 820px;
+  display: block;
+  object-fit: contain;
+  border-radius: 16px;
+  transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.master-plan-preview-wrapper:hover .master-plan-preview-img {
+  transform: scale(1.012);
+}
+
+.master-plan-overlay-cue {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.master-plan-cue-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(20, 16, 13, 0.88);
+  color: var(--text);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(217, 125, 54, 0.45);
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.master-plan-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  align-items: center;
+  width: 100%;
+}
+
+.master-plan-primary-actions {
+  display: flex;
+  gap: 0.9rem;
   flex-wrap: wrap;
-  padding: 1rem 1.2rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.master-plan-secondary-actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.master-plan-btn {
+  min-height: 48px;
+  padding: 0.85rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  gap: 0.55rem;
+}
+
+.btn-whatsapp-cta {
+  background: #25D366;
+  color: #fff;
+  border: 1px solid #1eb855;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+}
+
+.btn-whatsapp-cta:hover {
+  background: #20ba59;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.35);
+}
+
+/* ── Lightbox Overlay ────────────────────────────────────── */
+.plan-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(10, 8, 6, 0.96);
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.plan-lightbox-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1.4rem;
+  background: rgba(25, 21, 18, 0.92);
+  border-bottom: 1px solid rgba(171, 93, 34, 0.25);
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.plan-lightbox-title-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.plan-lightbox-kicker {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand);
+  font-weight: 700;
+  margin: 0;
+}
+
+.plan-lightbox-title {
+  font-size: 1.05rem;
+  font-family: var(--font-heading);
+  color: var(--text);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.plan-lightbox-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
   background: var(--bg-soft);
-  border-top: 1px solid var(--line);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.22rem 0.55rem;
+}
+
+.plan-ctl-btn {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.plan-ctl-btn:hover:not(:disabled) {
+  background: rgba(217, 125, 54, 0.25);
+  color: var(--brand);
+}
+
+.plan-ctl-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.plan-zoom-indicator {
+  font-size: 0.84rem;
+  font-weight: 700;
+  min-width: 46px;
+  text-align: center;
+  color: var(--text);
+  user-select: none;
+}
+
+.plan-ctl-reset {
+  width: auto;
+  border-radius: 999px;
+  padding: 0 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.plan-lightbox-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.plan-header-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.48rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  color: var(--text);
+  transition: all 180ms ease;
+}
+
+.plan-header-link:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.plan-header-wa {
+  background: rgba(37, 211, 102, 0.16);
+  border-color: rgba(37, 211, 102, 0.4);
+  color: #25D366;
+}
+
+.plan-header-wa:hover {
+  background: #25D366;
+  color: #fff;
+  border-color: #25D366;
+}
+
+.plan-close-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.plan-close-btn:hover {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+
+.plan-lightbox-canvas {
+  flex: 1 1 auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  user-select: none;
+  touch-action: none;
+}
+
+.plan-lightbox-canvas.can-pan {
+  cursor: grab;
+}
+
+.plan-lightbox-canvas.is-panning {
+  cursor: grabbing;
+}
+
+.plan-image-transform-container {
+  transform-origin: center center;
+  will-change: transform;
+  max-width: 95vw;
+  max-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan-lightbox-image {
+  max-width: 88vw;
+  max-height: 82vh;
+  object-fit: contain;
+  pointer-events: none;
+  border-radius: 8px;
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.75);
+}
+
+.plan-lightbox-footer-tip {
+  padding: 0.6rem 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: rgba(20, 16, 13, 0.8);
+  border-top: 1px solid rgba(171, 93, 34, 0.18);
+  flex-shrink: 0;
 }
 
 /* ── Plot Booking Section ────────────────────────────────── */
@@ -1412,10 +1710,6 @@ p {
   .footer-cta-actions {
     justify-content: center;
   }
-
-  .map-iframe {
-    height: 480px;
-  }
 }
 
 @media (max-width: 900px) {
@@ -1497,8 +1791,38 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .map-iframe {
-    height: 340px;
+  /* Master plan mobile actions */
+  .master-plan-primary-actions,
+  .master-plan-secondary-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .master-plan-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .master-plan-cue-pill {
+    font-size: 0.76rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .plan-lightbox-bar {
+    padding: 0.5rem 0.75rem;
+    gap: 0.4rem;
+  }
+
+  .plan-lightbox-title-group {
+    display: none;
+  }
+
+  .plan-header-link-text {
+    display: none;
+  }
+
+  .plan-header-link {
+    padding: 0.45rem 0.6rem;
   }
 }
 

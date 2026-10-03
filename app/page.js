@@ -4,6 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import LeadForm from "@/components/LeadForm";
 import PlotBookingForm from "@/components/PlotBookingForm";
+import MasterPlanSection from "@/components/MasterPlanSection";
 
 /* ─── JSON-LD Schemas ─────────────────────────────────────── */
 const jsonLdOrganization = {
@@ -382,49 +383,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 5.5 SITE MAP (PDF VIEWER) ────────────────────────── */}
-        <section className="section" aria-label="Saffron City site map and block plan">
-          <div className="container">
-            <div className="section-head reveal">
-              <p className="kicker">Master Plan & Block Map</p>
-              <h2>Saffron City Islamabad — Sector A & B Block Plan</h2>
-              <p>
-                Explore the official Saffron City Islamabad block plan for Sector A
-                and Sector B. Use the map below to identify plot locations, road
-                widths, green belts, and commercial zones before you book.
-              </p>
-            </div>
-            <div className="map-viewer-wrap reveal">
-              <iframe
-                src="/map/260610-SAFFRON CITY A & B BLOCK FINAL FILE-Model.pdf#toolbar=1&view=FitH"
-                title="Saffron City Islamabad Sector A & B Block Plan Map"
-                className="map-iframe"
-                loading="lazy"
-              />
-              <div className="map-actions">
-                <a
-                  href="/map/260610-SAFFRON CITY A & B BLOCK FINAL FILE-Model.pdf"
-                  download
-                  className="btn btn-primary"
-                  aria-label="Download Saffron City block plan PDF"
-                >
-                  ⬇ Download Block Plan (PDF)
-                </a>
-                <a
-                  href={`https://wa.me/923315408089?text=${encodeURIComponent(
-                    "Hi, I viewed the Saffron City block plan and I want to inquire about available plots."
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-ghost"
-                  aria-label="Ask about plots on WhatsApp"
-                >
-                  💬 Ask About a Plot on WhatsApp
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* ── 5.5 MASTER PLAN SECTION ─────────────────────────── */}
+        <MasterPlanSection />
 
         {/* ── 5.6 PLOT AVAILABILITY & BOOKING ─────────────────── */}
         <section
