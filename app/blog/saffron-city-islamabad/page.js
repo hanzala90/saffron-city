@@ -15,7 +15,7 @@ export const metadata = {
     "Saffron City investment"
   ],
   alternates: {
-    canonical: "/blog/saffron-city-islamabad"
+    canonical: "https://www.safroncity.com/blog/saffron-city-islamabad"
   },
   openGraph: {
     title: "Saffron City Islamabad: Location, Payment Plan, and Investment Outlook",

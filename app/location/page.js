@@ -6,7 +6,17 @@ import SiteFooter from "@/components/SiteFooter";
 export const metadata = {
   title: "Saffron City Islamabad Location",
   description:
-    "Explore Saffron City location highlights, nearby landmarks, and accessibility advantages across Islamabad and Rawalpindi."
+    "Explore Saffron City location highlights, nearby landmarks, and accessibility advantages across Islamabad and Rawalpindi.",
+  alternates: {
+    canonical: "https://www.safroncity.com/location"
+  },
+  openGraph: {
+    title: "Saffron City Islamabad Location",
+    description:
+      "Explore Saffron City location highlights, nearby landmarks, and accessibility advantages across Islamabad and Rawalpindi.",
+    url: "https://www.safroncity.com/location",
+    type: "website"
+  }
 };
 
 const locationHighlights = [

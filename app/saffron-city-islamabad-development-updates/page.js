@@ -20,7 +20,7 @@ export const metadata = {
     "Saffron City construction status"
   ],
   alternates: {
-    canonical: "/saffron-city-islamabad-development-updates"
+    canonical: "https://www.safroncity.com/saffron-city-islamabad-development-updates"
   },
   openGraph: {
     title: pageTitle,

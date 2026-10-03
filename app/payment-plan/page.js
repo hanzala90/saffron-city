@@ -6,7 +6,17 @@ import SiteFooter from "@/components/SiteFooter";
 export const metadata = {
   title: "Saffron City Islamabad Payment Plan",
   description:
-    "Review Saffron City Sector A pre-launch payment plan with booking amount, monthly installments, and possession charges."
+    "Review Saffron City Sector A pre-launch payment plan with booking amount, monthly installments, and possession charges.",
+  alternates: {
+    canonical: "https://www.safroncity.com/payment-plan"
+  },
+  openGraph: {
+    title: "Saffron City Islamabad Payment Plan",
+    description:
+      "Review Saffron City Sector A pre-launch payment plan with booking amount, monthly installments, and possession charges.",
+    url: "https://www.safroncity.com/payment-plan",
+    type: "website"
+  }
 };
 
 const planRows = [

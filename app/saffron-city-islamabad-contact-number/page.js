@@ -18,7 +18,7 @@ export const metadata = {
     "contact Saffron City Islamabad"
   ],
   alternates: {
-    canonical: "/saffron-city-islamabad-contact-number"
+    canonical: "https://www.safroncity.com/saffron-city-islamabad-contact-number"
   }
 };
 

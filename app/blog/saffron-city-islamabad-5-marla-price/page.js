@@ -17,7 +17,7 @@ export const metadata = {
     "Saffron City payment plan"
   ],
   alternates: {
-    canonical: "/blog/saffron-city-islamabad-5-marla-price"
+    canonical: "https://www.safroncity.com/blog/saffron-city-islamabad-5-marla-price"
   },
   openGraph: {
     title: pageTitle,

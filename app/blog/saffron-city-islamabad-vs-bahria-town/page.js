@@ -17,7 +17,7 @@ export const metadata = {
     "Islamabad housing society comparison"
   ],
   alternates: {
-    canonical: "/blog/saffron-city-islamabad-vs-bahria-town"
+    canonical: "https://www.safroncity.com/blog/saffron-city-islamabad-vs-bahria-town"
   },
   openGraph: {
     title: pageTitle,

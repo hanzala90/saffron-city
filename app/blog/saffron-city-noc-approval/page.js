@@ -12,7 +12,7 @@ export const metadata = {
   title: "Is Saffron City NOC Approved by RDA",
   description: pageDescription,
   alternates: {
-    canonical: "/blog/saffron-city-noc-approval"
+    canonical: "https://www.safroncity.com/blog/saffron-city-noc-approval"
   },
   openGraph: {
     title: pageTitle,

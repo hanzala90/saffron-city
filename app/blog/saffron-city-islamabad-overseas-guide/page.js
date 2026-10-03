@@ -17,7 +17,7 @@ export const metadata = {
     "Saffron City booking process"
   ],
   alternates: {
-    canonical: "/blog/saffron-city-islamabad-overseas-guide"
+    canonical: "https://www.safroncity.com/blog/saffron-city-islamabad-overseas-guide"
   },
   openGraph: {
     title: pageTitle,

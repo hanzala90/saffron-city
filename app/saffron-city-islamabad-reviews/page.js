@@ -20,7 +20,7 @@ export const metadata = {
     "Saffron City pros and cons"
   ],
   alternates: {
-    canonical: "/saffron-city-islamabad-reviews"
+    canonical: "https://www.safroncity.com/saffron-city-islamabad-reviews"
   },
   openGraph: {
     title: pageTitle,

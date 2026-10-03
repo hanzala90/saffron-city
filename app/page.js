@@ -6,6 +6,24 @@ import LeadForm from "@/components/LeadForm";
 import PlotBookingForm from "@/components/PlotBookingForm";
 import MasterPlanSection from "@/components/MasterPlanSection";
 
+export const metadata = {
+  title: "Saffron City Islamabad | Premium Housing Society & Real Estate",
+  description:
+    "Saffron City Islamabad is a premium RDA-approved housing society on GT Road offering residential & commercial plots, flexible payment plans, and modern infrastructure. Book your Saffron City plot today.",
+  alternates: {
+    canonical: "https://www.safroncity.com"
+  },
+  openGraph: {
+    title: "Saffron City Islamabad | Premium Housing Society & Real Estate",
+    description:
+      "Saffron City Islamabad is a premium RDA-approved housing society on GT Road offering residential & commercial plots, flexible payment plans, and modern infrastructure. Book your Saffron City plot today.",
+    url: "https://www.safroncity.com",
+    siteName: "Saffron City Islamabad",
+    locale: "en_PK",
+    type: "website"
+  }
+};
+
 /* ─── JSON-LD Schemas ─────────────────────────────────────── */
 const jsonLdOrganization = {
   "@context": "https://schema.org",

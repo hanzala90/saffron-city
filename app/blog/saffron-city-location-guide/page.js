@@ -12,7 +12,7 @@ export const metadata = {
   title: "Saffron City Location Guide",
   description: pageDescription,
   alternates: {
-    canonical: "/blog/saffron-city-location-guide"
+    canonical: "https://www.safroncity.com/blog/saffron-city-location-guide"
   },
   openGraph: {
     title: pageTitle,

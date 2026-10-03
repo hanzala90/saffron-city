@@ -54,9 +54,6 @@ export const metadata = {
     "residential plots near Islamabad",
     "Islamabad real estate"
   ],
-  alternates: {
-    canonical: "/"
-  },
   robots: {
     index: true,
     follow: true,

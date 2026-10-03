@@ -20,7 +20,7 @@ export const metadata = {
     "Saffron City Islamabad investment"
   ],
   alternates: {
-    canonical: "/saffron-city-islamabad"
+    canonical: "https://www.safroncity.com/saffron-city-islamabad"
   },
   openGraph: {
     title: pageTitle,

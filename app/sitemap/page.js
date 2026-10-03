@@ -6,7 +6,7 @@ export const metadata = {
   title: "HTML Sitemap | Saffron City Islamabad",
   description: "Navigate all pages of Saffron City Islamabad website with our complete HTML sitemap.",
   alternates: {
-    canonical: "/sitemap"
+    canonical: "https://www.safroncity.com/sitemap"
   }
 };
 

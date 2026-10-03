@@ -107,6 +107,12 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.90
+    },
+    {
+      url: "https://www.safroncity.com/sitemap",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.70
     }
   ];
 }

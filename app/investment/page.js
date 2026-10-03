@@ -5,7 +5,17 @@ import SiteFooter from "@/components/SiteFooter";
 export const metadata = {
   title: "Investment Potential",
   description:
-    "Discover why Saffron City is positioned as a strong long-term investment opportunity near Islamabad."
+    "Discover why Saffron City is positioned as a strong long-term investment opportunity near Islamabad.",
+  alternates: {
+    canonical: "https://www.safroncity.com/investment"
+  },
+  openGraph: {
+    title: "Investment Potential | Saffron City Islamabad",
+    description:
+      "Discover why Saffron City is positioned as a strong long-term investment opportunity near Islamabad.",
+    url: "https://www.safroncity.com/investment",
+    type: "website"
+  }
 };
 
 const investmentPoints = [

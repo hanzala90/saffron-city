@@ -5,7 +5,17 @@ import LeadForm from "@/components/LeadForm";
 export const metadata = {
   title: "Contact & Booking",
   description:
-    "Contact Saffron City team to get payment details, inventory updates, and booking assistance."
+    "Contact Saffron City team to get payment details, inventory updates, and booking assistance.",
+  alternates: {
+    canonical: "https://www.safroncity.com/contact"
+  },
+  openGraph: {
+    title: "Contact & Booking | Saffron City Islamabad",
+    description:
+      "Contact Saffron City team to get payment details, inventory updates, and booking assistance.",
+    url: "https://www.safroncity.com/contact",
+    type: "website"
+  }
 };
 
 const faqs = [

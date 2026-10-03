@@ -6,7 +6,7 @@ export const metadata = {
   description:
     "Explore blog articles about Saffron City, including location benefits, payment plan details, and investment insights.",
   alternates: {
-    canonical: "/blog"
+    canonical: "https://www.safroncity.com/blog"
   }
 };
 
