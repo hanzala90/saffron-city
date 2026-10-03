@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArticleJsonLd, BreadcrumbJsonLd, CorporateContactJsonLd, LocalBusinessJsonLd } from "next-seo";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -26,44 +25,6 @@ export const metadata = {
 export default function SaffronCityIslamabadContactPage() {
   return (
     <>
-      <BreadcrumbJsonLd
-        items={[
-          { name: "Home", item: siteUrl },
-          { name: "Saffron City Islamabad", item: `${siteUrl}/saffron-city-islamabad` },
-          { name: "Contact Number", item: pageUrl }
-        ]}
-      />
-      
-      {/* Helps Google show a detailed contact rich snippet card */}
-      <CorporateContactJsonLd
-        url={siteUrl}
-        logo={`${siteUrl}/images/logo.png`}
-        contactPoint={[
-          {
-            telephone: "+92-300-1234567",
-            contactType: "customer service",
-            contactOption: "TollFree",
-            availableLanguage: ["English", "Urdu"]
-          }
-        ]}
-      />
-
-      <LocalBusinessJsonLd
-        type="RealEstateAgent"
-        id={pageUrl}
-        name="Saffron City Islamabad"
-        description={pageDescription}
-        url={pageUrl}
-        telephone="+92-300-1234567"
-        address={{
-          streetAddress: "Main GT Road",
-          addressLocality: "Islamabad",
-          addressRegion: "ICT",
-          postalCode: "44000",
-          addressCountry: "PK",
-        }}
-      />
-
       <SiteHeader />
       <main>
         <section className="section page-hero">

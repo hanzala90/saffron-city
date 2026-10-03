@@ -92,6 +92,12 @@ const relatedPages = [
   }
 ];
 
+const ceoVisionPoints = [
+  "Focus on trusted delivery and legal confidence for every buyer.",
+  "Create a community that balances lifestyle, access, and investment value.",
+  "Keep the project easy to understand for both local and overseas buyers."
+];
+
 export default function SaffronCityIslamabadPage() {
   return (
     <>
@@ -197,6 +203,35 @@ export default function SaffronCityIslamabadPage() {
                 priority
               />
             </div>
+          </div>
+        </section>
+
+        <section className="section section-surface" id="ceo-vision">
+          <div className="container two-col">
+            <div className="reveal">
+              <p className="kicker">Leadership Vision</p>
+              <h2>Vision of Malik Tariq, CEO</h2>
+              <p>
+                Malik Tariq&apos;s vision for Saffron City is to build a reliable, transparent,
+                and future-ready housing project for real buyers. The focus remains on delivering
+                a strong community identity while keeping the buying journey straightforward.
+              </p>
+              <ul className="check-list top-gap">
+                {ceoVisionPoints.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            </div>
+            <figure className="hero-media reveal delay-1">
+              <Image
+                src="/images/Malik-Tariq-Ceo.jpg"
+                alt="Malik Tariq, CEO of Saffron City"
+                width={900}
+                height={1100}
+                sizes="(max-width: 900px) 100vw, 46vw"
+                quality={90}
+              />
+            </figure>
           </div>
         </section>
 

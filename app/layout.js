@@ -19,15 +19,15 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 const siteUrl = "https://www.safroncity.com";
-const title = "Saffron City Islamabad | Premium Real Estate & Housing Society";
+const title = "Saffron City Islamabad | Premium Housing Society & Real Estate";
 const description =
-  "Invest in Saffron City Islamabad, the top premium housing society offering modern infrastructure, prime location, and flexible payment plans. Book your Saffron City plot today.";
+  "Saffron City Islamabad is a premium RDA-approved housing society on GT Road offering residential & commercial plots, flexible payment plans, and modern infrastructure. Book your Saffron City plot today.";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: title,
-    template: "%s | Saffron City"
+    template: "%s | Saffron City Islamabad"
   },
   description,
   icons: {
@@ -39,13 +39,20 @@ export const metadata = {
       { url: "/images/logo.png", type: "image/png" }
     ]
   },
-  applicationName: "Saffron City",
+  applicationName: "Saffron City Islamabad",
   keywords: [
     "Saffron City",
-    "Islamabad real estate",
-    "housing society near Islamabad",
-    "RDA approved project",
-    "property investment Pakistan"
+    "Saffron City Islamabad",
+    "Saffron City housing society",
+    "Saffron City plots for sale",
+    "Saffron City payment plan",
+    "Saffron City Islamabad booking",
+    "Saffron City Islamabad location",
+    "RDA approved housing Islamabad",
+    "housing society GT Road Islamabad",
+    "property investment Islamabad",
+    "residential plots near Islamabad",
+    "Islamabad real estate"
   ],
   alternates: {
     canonical: "/"
@@ -65,7 +72,7 @@ export const metadata = {
     title,
     description,
     url: siteUrl,
-    siteName: "Saffron City",
+    siteName: "Saffron City Islamabad",
     locale: "en_PK",
     type: "website",
     images: [
@@ -73,7 +80,7 @@ export const metadata = {
         url: "/images/master-plan.jpg",
         width: 1200,
         height: 630,
-        alt: "Master plan view of Saffron City"
+        alt: "Saffron City Islamabad master plan — premium housing society"
       }
     ]
   },
@@ -84,8 +91,14 @@ export const metadata = {
     images: ["/images/master-plan.jpg"]
   },
   category: "real estate",
-  creator: "Saffron City",
-  publisher: "Saffron City"
+  creator: "Saffron City Islamabad",
+  publisher: "Saffron City Islamabad",
+  other: {
+    "geo.region": "PK-PB",
+    "geo.placename": "Islamabad",
+    "geo.position": "33.6844;73.0479",
+    "ICBM": "33.6844, 73.0479"
+  }
 };
 
 export default function RootLayout({ children }) {

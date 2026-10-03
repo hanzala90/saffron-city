@@ -3,34 +3,21 @@
 import { useEffect, useState } from "react";
 import LeadForm from "@/components/LeadForm";
 
-const STORAGE_KEY = "saffron-mobile-popup-seen";
+const STORAGE_KEY = "saffron-popup-seen";
 
 export default function MobileLeadPopup() {
   const [isOpen, setIsOpen] = useState(false);
-  const [canShow, setCanShow] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    const isMobile = window.matchMedia("(max-width: 900px)").matches;
+    setMounted(true);
     const alreadySeen = window.sessionStorage.getItem(STORAGE_KEY) === "1";
-
-    if (!isMobile) {
-      return;
-    }
-
-    setCanShow(true);
-
     if (!alreadySeen) {
       const timer = window.setTimeout(() => {
         setIsOpen(true);
-      }, 1400);
-
+      }, 800);
       return () => window.clearTimeout(timer);
     }
-
     return undefined;
   }, []);
 
@@ -41,30 +28,32 @@ export default function MobileLeadPopup() {
     }
   };
 
-  const openPopup = () => {
-    setIsOpen(true);
-  };
-
-  if (!canShow) {
-    return null;
-  }
+  if (!mounted) return null;
 
   return (
     <>
-      <button className="mobile-lead-fab" type="button" onClick={openPopup} aria-label="Open quick booking form">
-        Quick Booking
-      </button>
-
       {isOpen && (
-        <div className="popup-overlay" role="dialog" aria-modal="true" aria-label="Quick booking form">
+        <div
+          className="popup-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Get Saffron City pricing"
+        >
           <div className="popup-card">
-            <button className="popup-close" type="button" onClick={closePopup} aria-label="Close popup">
+            <button
+              className="popup-close"
+              type="button"
+              onClick={closePopup}
+              aria-label="Close popup"
+            >
               ×
             </button>
-            <p className="kicker">Mobile Priority Form</p>
-            <h2>Get Pricing on WhatsApp Call</h2>
+            <p className="kicker">Limited Plots Available</p>
+            <h2>Get Saffron City Islamabad Pricing & Availability</h2>
             <p className="popup-copy">
-              Fill this quick form and our advisor will contact you with latest rates and availability.
+              Share your details and our advisor will call you back with the
+              latest rates, available plot sizes, and Saffron City payment plan
+              options.
             </p>
             <LeadForm className="lead-form popup-form" />
           </div>
